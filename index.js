@@ -1,1 +1,1 @@
-module.exports = require('./lib/d3component');
+module.exports = require('./lib');
