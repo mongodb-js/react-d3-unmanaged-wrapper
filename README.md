@@ -1,7 +1,9 @@
 # react-d3-unmanaged-wrapper [![travis][travis_img]][travis_url] [![npm][npm_img]][npm_url]
 
 React component that uses Mike Bostock's [reusable charts][reusable-charts] pattern
-to render d3 code inside a `<svg>` or `<div>` container.
+to render d3 code inside a `<svg>` or `<div>` container. The DOM elements created
+with d3 are unmanaged: the React component is unaware of the contents of the
+container and will not touch those elements.
 
 ## Example
 
@@ -62,7 +64,7 @@ Now set up and render the D3 component, e.g. in `./index.js`:
 ```javascript
 
 const ReactDOM = require('react-dom');
-const D3Component = require('hadron-react-d3-unmanaged-wrapper');
+const D3Component = require('react-d3-unmanaged-wrapper');
 const d3fn = require('./d3fn');
 
 const options = {
