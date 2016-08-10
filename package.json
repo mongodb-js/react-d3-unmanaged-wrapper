@@ -19,9 +19,11 @@
   "dependencies": {
     "d3-selection": "^1.0.2",
     "eslint-config-mongodb-js": "^2.0.1",
-    "lodash.assign": "^4.1.0",
-    "react": "^15.3.0",
-    "react-dom": "^15.3.0"
+    "lodash.assign": "^4.1.0"
+  },
+  "peerDependencies": {
+    "react": ">=14.x",
+    "react-dom": ">=14.x"
   },
   "devDependencies": {
     "babel-eslint": "^6.1.2",
