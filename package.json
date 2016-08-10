@@ -1,5 +1,5 @@
 {
-  "name": "react-d3-component",
+  "name": "react-d3-unmanaged-wrapper",
   "description": "React component that wraps d3 code inside a div or svg container.",
   "version": "0.0.0",
   "scripts": {
@@ -8,13 +8,13 @@
     "test": "mocha",
     "ci": "npm run check && npm test"
   },
-  "homepage": "http://github.com/mongodb-js/react-d3-component",
+  "homepage": "http://github.com/mongodb-js/react-d3-unmanaged-wrapper",
   "repository": {
     "type": "git",
-    "url": "git://github.com/mongodb-js/react-d3-component.git"
+    "url": "git://github.com/mongodb-js/react-d3-unmanaged-wrapper.git"
   },
   "bugs": {
-    "url": "git://github.com/mongodb-js/react-d3-component.git/issues"
+    "url": "git://github.com/mongodb-js/react-d3-unmanaged-wrapper.git/issues"
   },
   "dependencies": {
     "d3-selection": "^1.0.2",

@@ -1,4 +1,4 @@
-# react-d3-component [![travis][travis_img]][travis_url] [![npm][npm_img]][npm_url]
+# react-d3-unmanaged-wrapper [![travis][travis_img]][travis_url] [![npm][npm_img]][npm_url]
 
 React component that uses Mike Bostock's [reusable charts][reusable-charts] pattern
 to render d3 code inside a `<svg>` or `<div>` container.
@@ -62,7 +62,7 @@ Now set up and render the D3 component, e.g. in `./index.js`:
 ```javascript
 
 const ReactDOM = require('react-dom');
-const D3Component = require('hadron-react-d3-component');
+const D3Component = require('hadron-react-d3-unmanaged-wrapper');
 const d3fn = require('./d3fn');
 
 const options = {
@@ -73,7 +73,10 @@ const options = {
   data: [14, 19, 25, 6, 9, 24, 31]
 };
 
+// instantiate component and pass in width, height, data and d3 function
 const chart = <D3Component {...options} />;
+
+// render in DOM (or embed in other components)
 ReactDOM.render(chart, document.body);
 ```
 
@@ -87,7 +90,7 @@ nodes that actually need to change. d3 accesses the DOM directly, and through
 data binding updates the DOM nodes that have been modified.
 
 The approach taken here is quite simple. React sets up (and "owns") the container
-but considers the elements inside the container unmanaged and leaves their
+but considers the elements inside the container _unmanaged_ and leaves their
 handling to d3. This is achieved by calling the d3 drawing function on
 `componentDidMount` (for initial setup) and `componentDidUpdate` (for redrawing).
 
@@ -97,8 +100,8 @@ handling to d3. This is achieved by calling the d3 drawing function on
 
 Apache 2.0
 
-[travis_img]: https://img.shields.io/travis/mongodb-js/react-d3-component.svg
-[travis_url]: https://travis-ci.org/mongodb-js/react-d3-component
-[npm_img]: https://img.shields.io/npm/v/react-d3-component.svg
-[npm_url]: https://npmjs.org/package/react-d3-component
-[resuable-charts]: https://bost.ocks.org/mike/chart/
+[travis_img]: https://img.shields.io/travis/mongodb-js/react-d3-unmanaged-wrapper.svg
+[travis_url]: https://travis-ci.org/mongodb-js/react-d3-unmanaged-wrapper
+[npm_img]: https://img.shields.io/npm/v/react-d3-unmanaged-wrapper.svg
+[npm_url]: https://npmjs.org/package/react-d3-unmanaged-wrapper
+[reusable-charts]: https://bost.ocks.org/mike/chart/
