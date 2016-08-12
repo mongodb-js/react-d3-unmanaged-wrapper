@@ -6,6 +6,9 @@
     "fmt": "mongodb-js-fmt",
     "check": "mongodb-js-precommit",
     "test": "mocha",
+    "compile": "babel ./src --out-dir ./lib --presets react",
+    "prepublish": "npm run compile",
+    "pretest": "npm run compile",
     "ci": "npm run check && npm test"
   },
   "homepage": "http://github.com/mongodb-js/react-d3-unmanaged-wrapper",
@@ -20,11 +23,13 @@
     "d3-selection": "^1.0.2",
     "eslint-config-mongodb-js": "^2.0.1",
     "lodash.assign": "^4.1.0",
-    "react": ">=14.x",
-    "react-dom": ">=14.x"
+    "react": "14.x - 15.x",
+    "react-dom": "14.x - 15.x"
   },
   "devDependencies": {
+    "babel-cli": "^6.11.4",
     "babel-eslint": "^6.1.2",
+    "babel-preset-react": "^6.11.1",
     "eslint": "^3.2.2",
     "eslint-config-mongodb-js": "^2.0.1",
     "eslint-plugin-react": "^6.0.0",
