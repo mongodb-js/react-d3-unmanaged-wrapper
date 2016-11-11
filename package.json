@@ -30,12 +30,12 @@
   },
   "devDependencies": {
     "babel-cli": "^6.11.4",
-    "babel-eslint": "^6.1.2",
+    "babel-eslint": "^7.1.0",
     "babel-preset-react": "^6.11.1",
     "eslint": "^3.2.2",
     "eslint-config-mongodb-js": "^2.0.1",
     "eslint-plugin-react": "^6.0.0",
-    "mocha": "^2.3.4",
+    "mocha": "^3.1.2",
     "mongodb-js-fmt": "^0.0.3",
     "mongodb-js-precommit": "^0.2.8",
     "pre-commit": "^1.1.2"
